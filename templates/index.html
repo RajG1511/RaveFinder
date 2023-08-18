@@ -1,0 +1,42 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rave Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Rave Finder</h1>
+    <form action="/" method="POST">
+        <input type="text" name="city" placeholder="Enter a city">
+        <button type="submit">Search</button>
+    </form>
+    <div class="add-to-calendar">
+        <button class="add-all-calendar-button" style="display: none;">Add All to Calendar</button>
+    </div>
+    <div class="rave-list">
+        {% if raves %}
+            <ul>
+                {% for rave in raves %}
+                    <li class="rave-item">
+                        <div class="rave-content">
+                            <div class="rave-artists">
+                                <h2>{{ rave.artists|join(', ') }}</h2>
+                            </div>
+                            <div class="rave-details">
+                                <p class="rave-listeners">Listeners: {{ rave.listeners }}</p>
+                                <p class="rave-date">{{ rave.dateString }}</p>
+                            </div>
+                        </div>
+                        <div class="add-to-calendar">
+                            <button class="add-calendar-button" data-id="{{ rave.id }}">Add to Calendar</button>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

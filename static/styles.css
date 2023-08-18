@@ -1,0 +1,122 @@
+/* styles.css */
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff; /* Light text color */
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: #1f1f1f; /* Dark input background color */
+    color: #ffffff; /* Light text color */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #2ecc71;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.rave-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rave-item {
+    background-color: #1f1f1f; /* Dark card background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 400px;
+}
+
+.rave-artists {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff; /* Light text color */
+}
+
+.rave-details {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.add-to-calendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-calendar button {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-to-calendar button:hover {
+    background-color: #27ae60;
+}
+
+.add-to-calendar #add-all-to-calendar {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+.add-to-calendar #add-all-to-calendar:hover {
+    background-color: #2980b9;
+}
+
+.add-all-calendar-button:disabled {
+    background-color: #3498db; /* Change to the desired disabled background color */
+    cursor: not-allowed; /* Show the "not-allowed" cursor for disabled state */
+}
+
+.add-all-calendar-button:disabled:hover {
+    background-color: #3498db; /* Use the same background color as the disabled state */
+}
